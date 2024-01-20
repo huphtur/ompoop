@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>How many days until Omloop?</title>
+	<style>
+		@media (prefers-color-scheme: dark) {
+			html {
+				filter: invert(1);
+			}
+		}
+
+		body {
+			text-align: center;
+			font-family: 'Impact', sans-serif;
+			align-items: center;
+			display: flex;
+			height: 90vh;
+			justify-content: center;
+		}
+		
+		h1 {
+			font-size: 18rem;
+			margin: 0;
+		}
+		
+		h2 {
+			font-size: 2.2rem;
+			margin-top: -1.8rem;
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<h1 id="output"></h1>
+		<h2>Days until <a href="https://www.omloophetnieuwsblad.be/">Omloop</a></h2>
+	</div>
+	<script>
+		let output = document.getElementById("output");
+		const date1 = new Date('02/24/2024');
+		const date2 = new Date();
+		const difference = date1.getTime() - date2.getTime();
+		const days = Math.ceil(difference / (1000 * 3600 * 24));
+		output.innerHTML = `${days}`;
+	</script>
+</body>
+
+</html>
