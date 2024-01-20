@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>How many days until Omloop?</title>
+	<meta name="description" content="The next Omloop is Saturday, February 24, 2024">
+	<style>
+		@media (prefers-color-scheme: dark) {
+			html {
+				filter: invert(1);
+			}
+		}
+
+		body {
+			margin-top: 30vh;
+			text-align: center;
+			text-transform: uppercase;
+			font: 2em/1 'Impact', sans-serif;
+		}
+
+		b {
+			display: block;
+			font-size: 6em;
+		}
+	</style>
+</head>
+
+<body>
+	<p>
+		<b id="x">How many</b> Days until <a href="https://www.omloophetnieuwsblad.be/en">Omloop</a>
+	</p>
+	</div>
+	<script>
+		let x = document.getElementById("x");
+		let d = Math.ceil(Math.abs(new Date() - new Date('2024-02-24')) / 86400000);
+		x.innerHTML = `${d}`;
+		document.title = `${d} Days until Omloop`;
+	</script>
+</body>
+
+</html>
