@@ -46,6 +46,7 @@
 		const difference = date1.getTime() - date2.getTime();
 		const days = Math.ceil(difference / (1000 * 3600 * 24));
 		output.innerHTML = `${days}`;
+		document.title = `${days} Days until Omloop`;
 	</script>
 </body>
 
