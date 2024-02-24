@@ -17,7 +17,7 @@
 
 		body {
 			color: #000;
-			margin-top: 30vh;
+			margin-top: 20vh;
 			text-align: center;
 			background-color: #fff;
 			text-transform: uppercase;
@@ -36,14 +36,20 @@
 
 <body>
 	<p>
-		<b id="x">How many</b> Days until <a href="https://www.omloophetnieuwsblad.be/en">Omloop</a>
+		<b id="x">How many</b> 
+		<small>or</small>
+		<b id="y">How many</b> 
+		Days until <a href="https://www.omloophetnieuwsblad.be/en">Omloop</a>
 	</p>
-	<small>(not sure when in 2025 yet)</small>
+	<p><small>(not sure when in 2025 yet)</small></p>
 	<script>
 		let x = document.getElementById("x");
-		let d = Math.ceil(Math.abs(new Date() - new Date('2025-02-28')) / 86400000);
-		x.innerHTML = `${d}`;
-		document.title = `${d} Days until Omloop`;
+		let y = document.getElementById("y");
+		let a = Math.ceil(Math.abs(new Date() - new Date('2025-02-21')) / 86400000);
+		let b = Math.ceil(Math.abs(new Date() - new Date('2025-02-28')) / 86400000);
+		x.innerHTML = `${a}`;
+		y.innerHTML = `${b}`;
+		// document.title = `${a} Days until Omloop`;
 	</script>
 </body>
 
