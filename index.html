@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	<title>How many days until Omloop?</title>
-	<meta name="description" content="Omloop is Saturday, February 24, 2024">
+	<meta name="description" content="Omloop 2025 will be on a Saturday end of February.">
 	<meta name="author" content="huphtur">
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚴</text></svg>">
 	<style>
@@ -28,6 +28,9 @@
 			display: block;
 			font-size: 6em;
 		}
+		small {
+			font-size: .8rem;
+		}
 	</style>
 </head>
 
@@ -35,9 +38,10 @@
 	<p>
 		<b id="x">How many</b> Days until <a href="https://www.omloophetnieuwsblad.be/en">Omloop</a>
 	</p>
+	<small>(not sure when in 2025 yet)</small>
 	<script>
 		let x = document.getElementById("x");
-		let d = Math.ceil(Math.abs(new Date() - new Date('2024-02-24')) / 86400000);
+		let d = Math.ceil(Math.abs(new Date() - new Date('2025-02-28')) / 86400000);
 		x.innerHTML = `${d}`;
 		document.title = `${d} Days until Omloop`;
 	</script>
