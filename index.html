@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	<title>How many days until Omloop?</title>
-	<meta name="description" content="Omloop 2025 will be on a Saturday end of February.">
+	<meta name="description" content="Omloop 2025 will be on Saturday, March 1">
 	<meta name="author" content="huphtur">
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚴</text></svg>">
 	<style>
@@ -37,19 +37,13 @@
 <body>
 	<p>
 		<b id="x">How many</b> 
-		<small>or</small>
-		<b id="y">How many</b> 
 		Days until <a href="https://www.omloophetnieuwsblad.be/en">Omloop</a>
 	</p>
-	<p><small>(not sure when in 2025 yet)</small></p>
 	<script>
 		let x = document.getElementById("x");
-		let y = document.getElementById("y");
-		let a = Math.ceil(Math.abs(new Date() - new Date('2025-02-21')) / 86400000);
-		let b = Math.ceil(Math.abs(new Date() - new Date('2025-02-28')) / 86400000);
+		let a = Math.ceil(Math.abs(new Date() - new Date('2025-03-01')) / 86400000);
 		x.innerHTML = `${a}`;
-		y.innerHTML = `${b}`;
-		// document.title = `${a} Days until Omloop`;
+		document.title = `${a} Days until Omloop`;
 	</script>
 </body>
 
