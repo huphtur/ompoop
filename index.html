@@ -3,47 +3,59 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>How many days until Omloop?</title>
-	<meta name="description" content="Omloop 2025 will be on Saturday, March 1">
+	<meta name="description" content="When the season officialy starts!">
 	<meta name="author" content="huphtur">
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚴</text></svg>">
+
 	<style>
-		@media (prefers-color-scheme: dark) {
-			html {
-				filter: invert(1);
-			}
+		:root {
+			color-scheme: light dark;
 		}
 
 		body {
-			color: #000;
-			margin-top: 20vh;
+			font-family: sans-serif;
+			align-content: center;
 			text-align: center;
-			background-color: #fff;
-			text-transform: uppercase;
-			font: 2em/1 'Impact', sans-serif;
-		}
-
-		b {
-			display: block;
-			font-size: 6em;
-		}
-		small {
-			font-size: .8rem;
+			height: 90svh;
 		}
 	</style>
 </head>
 
 <body>
-	<p>
-		<b id="x">How many</b> 
-		Days until <a href="https://www.omloophetnieuwsblad.be/en">Omloop</a>
-	</p>
+	<h1><b class="countdown" id="countdown"></b> <a href="https://www.omloophetnieuwsblad.be/">Omloop</a></h1>
+
 	<script>
-		let x = document.getElementById("x");
-		let a = Math.ceil(Math.abs(new Date() - new Date('2025-03-01')) / 86400000);
-		x.innerHTML = `${a}`;
-		document.title = `${a} Days until Omloop`;
+		// Target date: March 1, 2025
+		const targetDate = new Date('2025-03-01');
+		const countdownElement = document.getElementById('countdown');
+
+
+		function updateCountdown() {
+			const now = new Date();
+			const timeDifference = targetDate - now;
+			const daysLeft = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+			let message = '';
+			let titleMessage = '';
+			if (daysLeft > 1) {
+				message = `${daysLeft} days until`;
+			} else if (daysLeft === 1) {
+				message = '1 day until';
+			} else if (daysLeft === 0) {
+				message = 'Today is';
+			} else {
+				message = 'Sometime next year is';
+			}
+
+			countdownElement.textContent = message;
+			document.title = message + ' Omloop';
+		}
+
+		// Update the countdown immediately and every day
+		updateCountdown();
+		setInterval(updateCountdown, 1000 * 60 * 60 * 24); // Update daily
 	</script>
 </body>
 
